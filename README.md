@@ -1,6 +1,6 @@
 # Head-less-service
 
-A headless service in Kubernetes is defined by setting clusterIP to None. It does not provide load balancing or a virtual IP, and instead, DNS resolves directly to the IP addresses of the backing pods. This allows clients to connect directly to individual pods, which is particularly useful for stateful applications and when combined with StatefulSets for stable network identities.
+A headless service in Kubernetes is defined by setting clusterIP to None. It does not provide load balancing or a virtual IP, and instead, DNS resolves directly to the IP addresses of the backing pods. This allows clients to connect directly to individual pods using the DNS names, which is particularly useful for stateful applications and when combined with StatefulSets for stable network identities.
 # deep understanding
 A headless service in Kubernetes is a service where clusterIP is set to None, meaning it does not allocate a virtual IP address.
 Unlike a normal service, a headless service does not perform load balancing or proxy traffic through kube-proxy.
