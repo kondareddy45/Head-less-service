@@ -8,9 +8,6 @@ Unlike a normal service, a headless service does not perform load balancing or p
 When a headless service is created, Kubernetes creates DNS records that directly resolve to the individual pod IPs.
 Instead of returning a single ClusterIP, DNS returns multiple A records, each corresponding to a pod.
 This allows clients to directly communicate with specific pods instead of going through a service abstraction.
-# Behavior Difference
-In a normal service, traffic is routed through a virtual IP and distributed across pods using load balancing.
-In a headless service, there is no load balancing, and the client is responsible for selecting which pod to connect to.
 # Use Cases
 Headless services are mainly used for stateful applications where each pod has a unique identity.
 They are commonly used with StatefulSets for databases like MySQL, MongoDB, and Cassandra.
