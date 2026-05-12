@@ -22,3 +22,9 @@ This is critical for clustered or distributed systems where nodes must know each
 
 # Command for DNS check
 kubectl run -it --rm --restart=Never --image=busybox dns-test -- nslookup mysql-statefulset-0.my-db-headless-service.default.svc.cluster.local
+
+mysql-statefulset-0   -----------> pod name
+my-db-headless-service   ---------> headless service name
+default   -------> namespace name
+svc.cluster.local   -----> cluser name
+
